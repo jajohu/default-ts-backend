@@ -1,5 +1,8 @@
 import express, { Request, Response } from 'express';
 import pino from 'pino';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const logger = pino();
 
