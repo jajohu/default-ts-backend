@@ -10,7 +10,7 @@ npm install
 ```bash
 npm run dev
 ```
-The server will be available on port 3000, or the port specified in the `.env` file.
+The server will be available on port 8000, or the port specified in the `.env` file.
 
 ## Available Commands
 * `npm run dev` - Start development server (hot reload)
@@ -30,7 +30,7 @@ The server will be available on port 3000, or the port specified in the `.env` f
 GET /health
 ```
 ```bash
-curl http://localhost:3000/health
+curl http://localhost:8000/health
 ```
 Response:
 ```json

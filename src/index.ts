@@ -16,7 +16,7 @@ app.get('/health', (_req: Request, res: Response) => {
 export { app };
 
 if (process.env.NODE_ENV !== 'test') {
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 8000;
   app.listen(PORT, () => {
     logger.info(`Server running on ${PORT}`);
   });
