@@ -1,15 +1,21 @@
 import express, { Request, Response } from 'express';
 import pino from 'pino';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 dotenv.config();
 
 const logger = pino();
 
 const app = express();
-app.use(express.json());
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+  }),
+);
 
 app.get('/health', (_req: Request, res: Response) => {
+  logger.debug('Received health check request');
   res.status(200).json({ status: 'ok' });
 });
 
